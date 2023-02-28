@@ -59,4 +59,10 @@ for ( let a = 0; a < list2.length; a ++) {
   list3.append(listItems);
 }
 // из списка вывести массив
-let array = []
+let par = document.createElement("p")
+let elParrent = document.querySelector("#example1") 
+let elements = elParrent.querySelectorAll("li")
+elements.forEach((el) => {
+  par.innerText = par.innerText + el.innerText + " "
+})
+document.body.append(par)
